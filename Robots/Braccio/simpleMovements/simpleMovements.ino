@@ -32,6 +32,7 @@ ServoSettings* servos = new ServoSettings[6];
 int pos = 0;
 
 void setup() {
+  /*
   // Initialization functions and set up the initial position for Braccio
   // All the servo motors will be positioned in the "safety" position:
   // Base (M1):90 degrees
@@ -40,6 +41,7 @@ void setup() {
   // Wrist vertical (M4): 180 degrees
   // Wrist rotation (M5): 90 degrees
   // gripper (M6): 10 degrees
+  */
   Braccio.begin();
   servos[0].s = base;
   servos[0].safepos = 90;
