@@ -20,3 +20,10 @@
     6. set the correct COM port & board (Arduino UNO R4 WIFI)
     7. Upload script
     8. in the folder "Robots/Braccio" you can find arduino code which also shows how to enable the wifi credentials on the board 
+    
+
+#### wifi
+
+For the arduino wifi to have wifi access: 
+1. copy the `arduino_secrets_template.h` to `arduino_secrets.h`
+2. fill in the correct settings in the **arduino_secrets.h**, NOT IN THE TEMPLATE FILE! (so you're not sharing your precious wifi credentials with the public)
