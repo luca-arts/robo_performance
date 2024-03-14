@@ -27,6 +27,8 @@ class MidiConnectionsHandler(server.Handler):
                         robot.stopFB()
                     case _:
                         print("got midi message {}".format(key))
+            if command.command == 'note_off':
+                robot.stopFB()
 
 
 if __name__ == '__main__':
