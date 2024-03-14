@@ -2,27 +2,24 @@
 
 runs Raspberry pi
 
-to install rtpmidi: 
+## install
 
-[source](https://github.com/davidmoreno/rtpmidid/releases)
+connect to the rpi:
+1. vnc-viewer
+2. make sure you're on the polymath network
+3. connect to `dog.local`
 
 ```bash
-wget https://github.com/davidmoreno/rtpmidid/releases/download/v23.10/rtpmidid_23.10_armhf.deb 
-sudo dpkg -i rtpmidid_23.10_armhf.deb 
-sudo apt -f install
-rm rtpmidid_23.10_armhf.deb 
+cd /home/pi/robo_performance/Robots/Dog
+python -m venv env
+source env/bin/activate
+pip install -r requirements.txt
 ```
 
-Adapt installation at `/etc/rtpmidid/default.ini`
+## run python script
 
-`/home/pi/rtpmidid-23.12/build/src/rtpmidid --port 5004` to launch, but then how to capture further packages?
-
-==> test capture midi messages on robot dog
-
-# RAVELOX
-
-https://github.com/ravelox/pimidi/
-
-`sudo apt install autotools-dev autoconf automake pkgconfig avahi-devel avahi`
-
-[tutorial?](https://blog.tarn-vedra.de/pimidi-box/)
+```bash
+cd /home/pi/robo_performance/Robots/Dog
+source env/bin/activate
+python dog_server.py
+```

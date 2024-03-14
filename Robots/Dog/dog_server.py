@@ -1,4 +1,5 @@
 from pymidi import server
+import WAVEGO.RPi.robot as robot
 
 
 class MidiConnectionsHandler(server.Handler):
@@ -14,6 +15,13 @@ class MidiConnectionsHandler(server.Handler):
                 key = command.params.key
                 velocity = command.params.velocity
                 print('Someone hit the key {} with velocity {}'.format(key, velocity))
+                match key:
+                    case "C1":
+                        robot.forward(100)
+                    case "Ds3":
+                        robot.backward(100)
+                    case _:
+                        print("got midi message {}".format(key))
 
 
 if __name__ == '__main__':
