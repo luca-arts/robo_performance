@@ -1,0 +1,3 @@
+[submodule "Robots/Dog/WAVEGO"]
+	path = Robots/Dog/WAVEGO
+	url = https://github.com/waveshare/WAVEGO
