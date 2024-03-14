@@ -5,6 +5,27 @@
 A laptop or an raspberry pi could serve as the central master. 
 This "brain" should read out a midi score and via e.g. python or pure data convert this to UDP messages towards the different robots. This way you can also incorporate a delay in each individual midi note transformation in order to synchronize the different datastreams.
 
+Install [rtpMidi](https://www.tobias-erichsen.de/software/rtpmidi.html) & [loopMidi](https://www.tobias-erichsen.de/software/loopmidi.html)
+
+to send reaper midi data over network:
+1. enable loopmidi
+
+![](./imgs/loopmidi.png)
+
+2. create devices for the dog (find it's IP address), as well as the arduino of the humanoid & the robot arm
+
+![](./imgs/rtpMidi_insert_rpi.png)
+
+3. connect these devices and check their latency (for compensation)
+
+![](./imgs/rtpMidi_connect.png)
+
+4. send data from reaper to the loopmidi
+
+![](./imgs/reaper_send_to_loopmidi.png)
+
+5. now the devices should be able to receive midi data (if the arduino code is uploaded & connected and the raspberry pi python server is started as well)
+
 ## robots
 
 1. Robot arm: Arduino Uno Wifi compatible braccio robot
