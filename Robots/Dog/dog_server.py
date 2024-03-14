@@ -23,8 +23,6 @@ class MidiConnectionsHandler(server.Handler):
                         robot.forward(100)
                     case "Ds3":
                         robot.backward(100)
-                    case "Gs3":
-                        robot.stopFB()
                     case _:
                         print("got midi message {}".format(key))
             if command.command == 'note_off':
